@@ -1,0 +1,67 @@
+
+        body {
+            margin-left: 45%;
+        }
+        #display {
+            width: 102px;
+            height: 310px;
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+            background: rgb(21, 20, 20);
+            padding: 10px;
+            border-radius: 15px;
+            position: relative; /* Positioning context for the lights */
+            overflow: hidden; /* Ensure no overflow */
+        }
+        .light {
+            border: black 1px solid;
+            width: 99px;
+            height: 99px;
+            border-radius: 50px;
+            background: #555; /* Default off color */
+            margin: 5px 0; /* Spacing between lights */
+            transition: background 1s ease; /* Smooth transition */
+        }
+        #red {
+            animation: red-light 6s infinite; /* Animation for red light */
+            animation-delay: 1.5s; 
+            
+        }
+        #yellow {
+            animation: yellow-light 6s infinite; /* Animation for yellow light */
+            animation-delay: 1.5s; /* Starts after red */
+        }
+        #green {
+            animation: green-light 6s infinite; /* Animation for green light */
+            animation-delay: 1.5s; /* Starts after yellow */
+        }
+
+        /* Keyframes for red light */
+        @keyframes red-light {
+            0%, 20% { background: red; } /* Red light on */
+            21%, 100% { background: #555; } /* All lights off */
+        }
+
+        /* Keyframes for yellow light */
+        @keyframes yellow-light {
+            0%, 20% { background: #555; } /* All lights off */
+            21%, 70% { background: yellow; } /* Yellow light on */
+            71%, 100% { background: #555; } /* All lights off */
+        }
+
+        /* Keyframes for green light */
+        @keyframes green-light {
+            0%, 20% { background: #555; } /* All lights off */
+            21%, 70% { background: #555; } /* All lights off */
+            71%, 100% { background: green; } /* Green light on */
+        }
+
+        #pole {
+            border: black solid 1px;
+            width: 30px;
+            height: 360px;
+            margin-left: 45px;
+            background: grey;
+        }
+    
